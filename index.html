@@ -340,11 +340,12 @@
         <p class="lede">One line on what we do: agent systems inside enterprise stacks that move a measured operating number, proven at Nitco, Musafir, and LegalMatch. You asked for what we have built and something you can see. 01 is the production record, four systems with measured numbers. 02 is four client environments running in this page; <a href="#c2">client-002</a> is the pattern you described on the call. 03 is the engagement method end to end. 04 is the economics with the math beside every number. 05 is the proposal.</p>
         <p class="sub">Recommendation: Target A in 05, an internal-first Practus copilot, two weeks, one gate metric agreed in writing on day one, fixed fee against the gate. The call decides the target; nothing else needs deciding before it.</p>
         <div class="stat-row">
-          <div class="stat"><b>4</b><small>Systems in production</small></div>
-          <div class="stat"><b>71→86</b><small>Forecast acc., backtested</small></div>
-          <div class="stat"><b>96.8%</b><small>Agent acc. @ wk 16</small></div>
+          <div class="stat"><b>4</b><small>In production, named in 01</small></div>
+          <div class="stat"><b>71→86</b><small>Rolling-origin backtest, frozen holdout</small></div>
+          <div class="stat"><b>96.8%</b><small>Weekly golden-set gate, week 16</small></div>
           <div class="stat"><b>13–18</b><small>Engineers, ~50% AI/ML</small></div>
         </div>
+        <p class='sub' style='margin-top:14px'>Every figure in this document carries its measurement method beside it: the backtest protocol is published in full in 01, the weekly release-gate report format in 03, and verified, modeled, and illustrative are labelled wherever they appear.</p>
         <div class="stackrow">
           <span class="sk">Python</span><span class="sk">TypeScript</span><span class="sk">.NET Minimal API</span><span class="sk">MongoDB · multi-tenant</span><span class="sk">Next.js</span><span class="sk">React Native</span><span class="sk">MCP-native tool registry</span><span class="sk">RL eval environments</span>
         </div>
@@ -367,7 +368,7 @@
 <section id="cases">
   <div class="wrap">
     <div class="sec-head"><span class="sec-code">01</span><h2>What already runs in production</h2></div>
-    <p class="sec-intro">The weekly gate-report format these systems ship under, and the backtest protocol that produces the accuracy figures, are published in this link: <a href='eval.html'>the eval and release-gate report</a>.</p>
+    <p class="sec-intro">Four systems, each with a measured number and the method that produced it. The protocol below is the one behind every accuracy figure in this document, published so it can be attacked line by line.</p>
     <p class="sec-intro">The problem, the agents deployed by name, the stack underneath, and the numbers with the measurement method attached. Nothing here is a pilot.</p>
 
     <!-- OPERATIONS -->
@@ -484,6 +485,16 @@
       </div>
     </div>
 
+    <div class='callout rv'>
+      <div class='ct'>The backtest protocol, published in full</div>
+      <ul class='dfind'>
+        <li><b>Holdout, frozen at kickoff.</b> The most recent 12 months of history are sealed before any model work begins; nothing ever trains on them.</li>
+        <li><b>Rolling-origin evaluation.</b> Each holdout month is forecast from an origin that sees only earlier data; the origin rolls forward and repeats. Twelve origins, twelve out-of-sample tests.</li>
+        <li><b>Metrics that cannot be gamed together.</b> Accuracy is 100 minus WAPE; bias is gated at plus or minus 3 percent beside it, so accuracy cannot be bought with systematic over- or under-forecasting.</li>
+        <li><b>Baseline first.</b> The incumbent method is scored under the identical protocol before ours; the claim is the difference, same data, same window, same math.</li>
+        <li><b>Re-proven every cycle.</b> The backtest re-runs on every retrain and rule change. A figure that stops passing stops being claimed.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -491,7 +502,7 @@
 <section id="demos">
   <div class="wrap">
     <div class="sec-head"><span class="sec-code">02</span><h2>Operate the systems yourself</h2></div>
-    <p class="sec-intro">Four client environments, live in this page. client-002 is the controller copilot you described; client-004 answers a data room with enforced citations; client-001 and client-003 carry the forecasting and lead-intelligence patterns. Move the inputs and read the working: routing, confidences, gates. Console data is illustrative; each brief below its console is a modeled reference sized to your client base, anchored to the named production systems, real figures marked real.</p>
+    <p class="sec-intro">Four client environments, live in this page. client-002 is the controller copilot you described; client-004 answers a data room with enforced citations; client-001 and client-003 carry the forecasting and lead-intelligence patterns. Move the inputs and read the working: routing, confidences, gates. Console data is illustrative; each brief below its console is a modeled reference sized to your client base, anchored to the named production systems, real figures marked real. Nothing here is a video or a mockup; the consoles execute in this page.</p>
 
     <!-- CLIENT-002 -->
     <div class="portal rv" id="c2">
@@ -983,6 +994,25 @@
           <div class="da"><div class="dat">Extension</div><p>Once close is stable the same chassis extends: <b>AR, procurement, FP&amp;A</b> join as modules against the same audit log and gates.</p></div>
           <div class="da"><div class="dat">Cadence and unit cost</div><p>Monthly: drift report and threshold tuning. Quarterly: CFO review, next-agent scoping. <b>Cost per processed invoice, modeled: &#8377;92 to &#8377;31.</b></p></div>
         </div>
+
+        <h6>One week of the operating report, the format every module ships under · numbers illustrative</h6>
+        <p class='dnote2'>This is the artifact, not a description of it: gates week over week, the golden set growing from overrides, one change run under regression, and a decision with a name on it.</p>
+        <table class='dtable'>
+          <thead><tr><th>Metric</th><th>Gate</th><th>Week 26</th><th>Week 27</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Exception classification accuracy</td><td>&#8805; 95% vs golden set</td><td>96.1%</td><td>96.4%</td><td><span class='g2'>PASS</span></td></tr>
+            <tr><td>Calibration error (ECE)</td><td>&#8804; 3%</td><td>2.4%</td><td>2.1%</td><td><span class='g2'>PASS</span></td></tr>
+            <tr><td>Citation coverage</td><td>= 100%, enforced</td><td>100%</td><td>100%</td><td><span class='g2'>PASS</span></td></tr>
+            <tr><td>Tool-call success</td><td>&#8805; 99%</td><td>99.4%</td><td>99.6%</td><td><span class='g2'>PASS</span></td></tr>
+            <tr><td>Latency, p95</td><td>&#8804; 4.0s</td><td>3.6s</td><td>3.4s</td><td><span class='g2'>PASS</span></td></tr>
+            <tr><td>Human override rate</td><td>declining trend</td><td>4.1%</td><td>3.6%</td><td><span class='g2'>PASS</span></td></tr>
+            <tr><td>Golden-set regression</td><td>all cases, on any change</td><td>237/237</td><td>240/240</td><td><span class='g2'>PASS</span></td></tr>
+          </tbody>
+        </table>
+        <ul class='dfind'>
+          <li><b>Golden set +3 this week</b>, each born from a human override, now permanent regression tests: ICX-1147 FX timing on the AED entity, RAMP-0934 implementation services split to CapEx, AR-0311 payment-history evidence over the aging bucket.</li>
+        </ul>
+        <p class='dnote2'><b>Change under regression:</b> rule 04 moved to the transaction-date RBI reference rate for AED pairs; full golden-set re-run, 0 regressions, 2 previously escalated cases now resolve correctly. <b>Decision: SHIP</b>, signed by the eval owner and the controller of record.</p>
     </div>
   </div>
 </section>
@@ -1095,7 +1125,8 @@
       <div class="g">Data stays in your tenancy</div>
       <div class="g">Recommend and approve, never auto-execute</div>
       <div class="g">NDA · DPA · full IP assignment</div>
-      <div class="g">RBAC · EntityId tenant isolation · immutable audit log</div>
+      <div class="g">Architected to ISO 42001 and SOC 2 Type II control frameworks · UAE PDPL and GDPR aligned</div>
+      <div class='g'>RBAC · EntityId tenant isolation · immutable audit log</div>
     </div>
 
     <div class="callout rv">
