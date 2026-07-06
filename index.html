@@ -209,7 +209,7 @@
   .gates tr:last-child td{border-bottom:0}
 
   /* module anatomy */
-  .man{background:var(--con-bg);color:var(--con-text);font-family:var(--mono);font-size:12.5px;line-height:1.8;padding:20px;margin-top:26px;overflow-x:auto}
+  .man{background:var(--con-bg);color:var(--con-text);font-family:var(--mono);font-size:12.5px;line-height:1.8;padding:20px;margin-top:26px;overflow-x:auto;white-space:pre}
   .man .c{color:var(--con-dim)} .man .kk{color:var(--signal)} .man .vv{color:var(--con-text)} .man .ww{color:var(--warn)}
 
   /* ---------- IP flow / lib / poc / build (from prior) ---------- */
@@ -1254,6 +1254,18 @@
 <span class="kk">config:</span> <span class="vv">client_schema.json</span>          <span class="c"># entities, calendars, chart of accounts</span>
 <span class="kk">evals:</span>  <span class="vv">golden_close_set/ · regression on every change</span>  <span class="c"># must pass to deploy</span>
 <span class="kk">audit:</span>  <span class="vv">every action → reasoning · confidence · timestamp</span></div>
+    <p class='dnote2' style='margin-top:14px'><b>For the non-engineer:</b> the same file, translated.</p>
+    <table class='dtable' style='margin-top:8px'>
+      <thead><tr><th>Manifest line</th><th>What it says in plain finance</th></tr></thead>
+      <tbody>
+        <tr><td>policy: close_policy@v3.2</td><td>The close methodology of a partner, written down and version-numbered like software: v3.3 diffs, tests, rolls back.</td></tr>
+        <tr><td>tools: [erp.read, gl.query, ...]</td><td>The systems it may touch. Each permission explicit and registered; nothing implicit.</td></tr>
+        <tr><td>guardrails: [approval_gate, ...]</td><td>The steps that always stop for a human: approvals, PII, spend.</td></tr>
+        <tr><td>config: client_schema.json</td><td>Client specifics are configuration, not code. Same module, new client, new schema file.</td></tr>
+        <tr><td>evals: golden_close_set</td><td>The definition of done. The module passes its exam on client data before deploying, and re-passes on every change.</td></tr>
+        <tr><td>audit: every action</td><td>Every action carries reasoning, confidence, timestamp: the trail an auditor reads.</td></tr>
+      </tbody>
+    </table>
 
     <div class="callout rv" style="margin-top:26px">
       <div class="ct">Precedent</div>
