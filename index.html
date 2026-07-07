@@ -345,7 +345,7 @@
       <div>
         <div class="eyebrow">Shiftora &#215; Practus &nbsp;/&nbsp; pre-read &nbsp;/&nbsp; 07 Jul 2026 &nbsp;/&nbsp; confidential</div>
         <h1>The record,<br>the method,<br><span class="lo">the operating lens.</span></h1>
-        <p class="lede">Shiftora builds agent systems inside enterprise stacks that move a measured operating number, in production at Nitco, LegalMatch, a UAE travel-and-visa operator, and further engagements that remain unnamed under NDA and client confidentiality obligations.</p>
+        <p class="lede">Shiftora builds agent systems inside enterprise stacks that move a measured operating number, in production across a listed building-materials manufacturer, a US legal marketplace, a UAE travel-and-visa operator, and further engagements, all under NDA and client confidentiality obligations.</p>
         <nav class='toc'>
           <a href='#cases'><span class='n'>01</span><b>Production</b><span>Systems in production, each with a measured result and its method.</span></a>
           <a href='#demos'><span class='n'>02</span><b>Environments</b><span>Four client consoles executing in this page, drawn from a wider engagement portfolio.</span></a>
@@ -391,7 +391,7 @@
 
     <div class="cs rv">
       <div class="l">
-        <div class="kick"><div class="client">Nitco Tiles: demand forecasting</div><div class="geo">India · listed</div></div>
+        <div class="kick"><div class="client">Building-materials manufacturer: demand forecasting</div><div class="geo">India · listed</div></div>
         <p class="prob">Ordering ran on spreadsheets and instinct against long supplier lead times. Every forecast miss became dead stock or a stockout weeks later, and nobody could say which SKUs to trust.</p>
         <h5>Agents deployed</h5>
         <ul class="agents">
@@ -450,7 +450,7 @@
 
     <div class="cs rv">
       <div class="l">
-        <div class="kick"><div class="client">LegalMatch: lead intelligence &amp; cadence</div><div class="geo">USA · $80M business</div></div>
+        <div class="kick"><div class="client">US legal marketplace: lead intelligence &amp; cadence</div><div class="geo">USA · $80M business</div></div>
         <p class="prob">A large sales floor spreading effort evenly across leads regardless of quality. High-intent prospects and dead ends got the same follow-up, and nobody could defend why.</p>
         <h5>Agents and models deployed</h5>
         <ul class="agents">
@@ -693,7 +693,7 @@
 
     <!-- CLIENT-001 -->
     <div class="portal rv" id="c1">
-      <div class="pchrome"><span class="dots"><i></i><i></i><i></i></span><span class="purl">shiftora.demo / client-001</span><span class="pmeta">operations · tile manufacturing · <b>pattern: nitco</b></span></div>
+      <div class="pchrome"><span class="dots"><i></i><i></i><i></i></span><span class="purl">shiftora.demo / client-001</span><span class="pmeta">operations · tile manufacturing · <b>pattern: demand forecasting</b></span></div>
       <div class="phd">
         <div class="l"><div class="dcode">client-001 · demand forecast agent</div><h3>A 12-month forecast, backtested before it is trusted.</h3><p>Adjust the operating conditions. The agent rebuilds the rolling forecast, backtests it rolling-origin, and reports WAPE and bias, the same gates the production system runs every cycle.</p></div>
         <div class="r">model <b>gbm ensemble + seasonal</b><br>validation <b>rolling-origin · 12 folds</b><br>data <b>illustrative</b></div>
@@ -727,7 +727,7 @@
       </div>
     
       <div class="dossier">
-        <div class="dos-tag"><span>Environment brief · <b>anchored to the Nitco deployment</b> · accuracy figures real, value ranges modeled</span><span>pattern running in production</span></div>
+        <div class="dos-tag"><span>Environment brief · <b>anchored to a production forecasting deployment</b> · accuracy figures real, value ranges modeled</span><span>pattern running in production</span></div>
 
         <h6>The org</h6>
         <div class="dprof">
@@ -787,7 +787,7 @@
 
     <!-- CLIENT-003 -->
     <div class="portal rv" id="c3">
-      <div class="pchrome"><span class="dots"><i></i><i></i><i></i></span><span class="purl">shiftora.demo / client-003</span><span class="pmeta">revenue · legal marketplace · <b>pattern: legalmatch</b></span></div>
+      <div class="pchrome"><span class="dots"><i></i><i></i><i></i></span><span class="purl">shiftora.demo / client-003</span><span class="pmeta">revenue · legal marketplace · <b>pattern: lead intelligence</b></span></div>
       <div class="phd">
         <div class="l"><div class="dcode">client-003 · lead intelligence agent</div><h3>Set the ranking policy; the book re-ranks in place.</h3><p>Calibrated three-stage scoring, re-ranked as the weights move. The cadence trace includes the calibration check; the model is trusted because its stated probabilities are measured against outcomes.</p></div>
         <div class="r">model <b>3-stage · calibrated</b><br>output <b>ranked book + cadence</b><br>data <b>illustrative</b></div>
@@ -814,7 +814,7 @@
       </div>
     
       <div class="dossier">
-        <div class="dos-tag"><span>Environment brief · <b>anchored to the LegalMatch deployment</b> · model behaviour real, value ranges modeled</span><span>USD context</span></div>
+        <div class="dos-tag"><span>Environment brief · <b>anchored to a production lead-scoring deployment</b> · model behaviour real, value ranges modeled</span><span>USD context</span></div>
 
         <h6>The org</h6>
         <div class="dprof">
@@ -858,7 +858,7 @@
             <tr class="tot"><td>Modeled total</td><td>$1.1 to 1.9M</td><td>Pilot-measured lift; extrapolation labelled as such</td></tr>
           </tbody>
         </table>
-        <p class="dnote2"><b>Anchor.</b> The scoring system, the calibration discipline, and the override loop are the production behaviour at LegalMatch. The dollar ranges are the modeled translation, held to what a pilot pod actually measured.</p>
+        <p class="dnote2"><b>Anchor.</b> The scoring system, the calibration discipline, and the override loop are the production behaviour at the legal-marketplace deployment. The dollar ranges are the modeled translation, held to what a pilot pod actually measured.</p>
       </div>
     </div>
 
@@ -1037,7 +1037,7 @@
     <p class="sec-intro">The same engagement is stated three ways in this document: throughput in 02 and 03, rupees here, architecture in Appendix A. This section is the finance translation.</p>
 <div class="callout rv">
       <div class="ct">On the numbers, three classes, always labelled</div>
-      <p><b>Verified:</b> figures from named production deployments (Nitco 71 to 86, the UAE visa platform shipped, the 16-week accuracy curve), backtested and reproducible on request. <b>Modeled:</b> the deployment dossiers are reference engagements sized to a Practus-scale client; every value line shows its methodology and conservative discounts so your team can stress-test each cell. <b>Illustrative:</b> the data inside the live consoles, generated in-browser. A number that cannot survive one of those three labels does not appear in this document, and second-order or cross-functional upside is named where relevant but excluded from every total.</p>
+      <p><b>Verified:</b> figures from named production deployments (forecast accuracy 71 to 86, the UAE visa platform shipped, the 16-week accuracy curve), backtested and reproducible on request. <b>Modeled:</b> the deployment dossiers are reference engagements sized to a Practus-scale client; every value line shows its methodology and conservative discounts so your team can stress-test each cell. <b>Illustrative:</b> the data inside the live consoles, generated in-browser. A number that cannot survive one of those three labels does not appear in this document, and second-order or cross-functional upside is named where relevant but excluded from every total.</p>
     </div>
     <div class="dossier rv" style="border:1px solid var(--line);margin-top:22px">
       <div class="dos-tag"><span>Worked example · <b>the reference finance engagement</b> from 02 and 03</span><span>each value re-derivable</span></div>
