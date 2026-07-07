@@ -609,7 +609,7 @@
     <div class="portal rv" id="c4">
       <div class="pchrome"><span class="dots"><i></i><i></i><i></i></span><span class="purl">shiftora.demo / client-004</span><span class="pmeta">data room · grounded retrieval · <b>pattern: talk to the data lake</b></span></div>
       <div class="phd">
-        <div class="l"><div class="dcode">client-004 · data-room copilot · RAG</div><h3>Ask the data room. Watch the retrieval.</h3><p>Grounded question-answering over a small finance corpus, an MSA, board minutes, an invoice register. The trace shows the full retrieval pipeline: query embedding, ANN search with similarity scores, cross-encoder rerank, grounded synthesis with citations, and a PII guardrail before release. Nothing in the answer is uncited.</p></div>
+        <div class="l"><div class="dcode">client-004 · data-room copilot · RAG</div><h3>Query the data room; the retrieval is shown step by step.</h3><p>Grounded question-answering over a small finance corpus, an MSA, board minutes, an invoice register. The trace shows the full retrieval pipeline: query embedding, ANN search with similarity scores, cross-encoder rerank, grounded synthesis with citations, and a PII guardrail before release. Nothing in the answer is uncited.</p></div>
         <div class="r">index <b>tenant-scoped · 3 docs</b><br>pipeline <b>embed → ANN → rerank → cite</b><br>data <b>illustrative</b></div>
       </div>
       <div class="pbody">
@@ -672,7 +672,7 @@
         <div class="resgrid">
           <div class="res"><b class="g">2-6 hrs &#8594; 3-8 min</b><small>question turnaround</small></div>
           <div class="res"><b class="g">100%</b><small>citation coverage in memo drafts, enforced</small></div>
-          <div class="res"><b>93%</b><small>red-flag recall vs the golden set</small></div>
+          <div class="res"><b>93%</b><small>recall at 5 on the golden question set</small></div>
           <div class="res"><b>240</b><small>obligations in the covenant register, clause-linked</small></div>
           <div class="res"><b>0</b><small>uncited sentences shipped</small></div>
           <div class="res"><b>2 langs</b><small>Hindi + English handled in one index</small></div>
@@ -695,7 +695,7 @@
     <div class="portal rv" id="c1">
       <div class="pchrome"><span class="dots"><i></i><i></i><i></i></span><span class="purl">shiftora.demo / client-001</span><span class="pmeta">operations · tile manufacturing · <b>pattern: nitco</b></span></div>
       <div class="phd">
-        <div class="l"><div class="dcode">client-001 · demand forecast agent</div><h3>Forecast the next 12 months. Then prove it.</h3><p>Adjust the operating conditions. The agent rebuilds the rolling forecast, backtests it rolling-origin, and reports WAPE and bias, the same gates the production system runs every cycle.</p></div>
+        <div class="l"><div class="dcode">client-001 · demand forecast agent</div><h3>A 12-month forecast, backtested before it is trusted.</h3><p>Adjust the operating conditions. The agent rebuilds the rolling forecast, backtests it rolling-origin, and reports WAPE and bias, the same gates the production system runs every cycle.</p></div>
         <div class="r">model <b>gbm ensemble + seasonal</b><br>validation <b>rolling-origin · 12 folds</b><br>data <b>illustrative</b></div>
       </div>
       <div class="pbody">
@@ -893,11 +893,11 @@
         <table class="dtable">
           <thead><tr><th>Workflow</th><th>Automatable</th><th>Modeled value / yr</th><th>Build</th></tr></thead>
           <tbody>
-            <tr><td>P1 · AP exception processing</td><td><span class="g2">88%</span></td><td>&#8377;1.4 to 1.8 Cr</td><td>4 wk</td></tr>
-            <tr><td>P2 · Intercompany reconciliation</td><td><span class="g2">82%</span></td><td>&#8377;0.7 to 0.9 Cr</td><td>6 wk</td></tr>
-            <tr><td>P3 · Close management</td><td><span class="g2">75%</span></td><td>&#8377;0.9 to 1.2 Cr</td><td>10 wk</td></tr>
+            <tr><td>P1 · AP exception processing</td><td><span class="g2">88%</span></td><td>&#8377;1.3 to 1.8 Cr</td><td>4 wk</td></tr>
+            <tr><td>P2 · Intercompany reconciliation</td><td><span class="g2">82%</span></td><td>&#8377;0.6 to 0.9 Cr</td><td>6 wk</td></tr>
+            <tr><td>P3 · Close management</td><td><span class="g2">75%</span></td><td>&#8377;0.8 to 1.2 Cr</td><td>10 wk</td></tr>
             <tr><td>P4 · Treasury and cash position</td><td><span class="g2">90%</span></td><td>&#8377;0.5 to 0.7 Cr</td><td>4 wk</td></tr>
-            <tr><td>P5 · Variance and reporting</td><td><span class="g2">72%</span></td><td>&#8377;0.4 to 0.55 Cr</td><td>8 wk</td></tr>
+            <tr><td>P5 · Variance and reporting</td><td><span class="g2">72%</span></td><td>&#8377;0.5 to 0.7 Cr</td><td>8 wk</td></tr>
           </tbody>
         </table>
         <div class="dpattern">Of the 41,000 hours, roughly 70% automates on the audit&#39;s evidence. About 12,300 hours remain with people: judgement, exceptions, relationships. The five workflows above are the largest of the 17; their sum is the modeled total in 04, sequenced by ROI and gated per workflow.</div>
@@ -1048,7 +1048,7 @@
     <div class="dossier rv" style="border:1px solid var(--line);margin-top:22px">
       <div class="dos-tag"><span>Worked example · <b>the reference finance engagement</b> from 02 and 03</span><span>each value re-derivable</span></div>
 <h6>Value, modeled conservatively</h6>
-        <p class="dnote2">Ranges use fully loaded role costs for a mid-market Indian finance org, year-one realization discounted to 70 to 85%, and value held to directly measurable lines. The method is stated beside every number so each cell can be independently re-derived. Value splits roughly 60% cost reduction, 25% working capital and revenue, 15% risk avoided.</p>
+        <p class="dnote2">Ranges use fully loaded role costs for a mid-market Indian finance org, year-one realization discounted to 70 to 85%, and value held to directly measurable lines. The method is stated beside every number so each cell can be independently re-derived. Of the modeled total, efficiency drivers (capacity recovered, rework avoided) contribute &#8377;2.0 to 2.8 Cr; cash drivers (early-payment capture, DSO) contribute &#8377;1.7 to 2.5 Cr.</p>
         <table class="dtable" style="margin-top:12px">
           <thead><tr><th>Value driver</th><th>Modeled range, year one</th><th>Methodology</th></tr></thead>
           <tbody>
@@ -1093,7 +1093,7 @@
         <li>Best if there is revenue waiting on execution this quarter.</li>
         <li>You hold: the unblocked mandate and the eval report behind it.</li>
       </ul></div>
-      <div class="wk"><div class="w">Target C · platform spike</div><h4>One module of your platform</h4><ul>
+      <div class="wk"><div class="w">Target C · platform spike</div><h4>One module of the Practus platform</h4><ul>
         <li>The controller-copilot skeleton on your schema, MCP-registered tools included, per the manifest above.</li>
         <li>Best if the platform is the priority and you want the build risk priced before hiring completes.</li>
         <li>You hold: a running module and the manifest to extend it, fully yours.</li>
@@ -1122,7 +1122,7 @@
 
     <div class="twocol rv">
       <div>
-        <h4>What we need from you</h4>
+        <h4>Required from Practus</h4>
         <ul>
           <li>One named owner on the Practus side for the two weeks.</li>
           <li>A sample dataset and the outcome definition.</li>
@@ -1130,7 +1130,7 @@
         </ul>
       </div>
       <div>
-        <h4>What you hold at the end</h4>
+        <h4>What Practus holds at the end</h4>
         <ul>
           <li>A working agent against your data, with its trace and eval report.</li>
           <li>The repository, infra-as-code, and runbook, operable without us.</li>
@@ -1173,7 +1173,7 @@
   
     <div class="build rv">
       <div><h4>The team</h4><p>13 to 18 full-time engineers across Mumbai and Dubai. Roughly half are AI and ML engineers, including reinforcement-learning engineers dedicated to evaluation environments, backtesting, and release gating. The rest are full-stack.</p></div>
-      <div><h4>Under your brand</h4><p>On any Practus mandate we build behind you and stay invisible. You keep the client relationship, the roadmap, and the outcome. We are a cost input you price and mark up, never between you and the client.</p></div>
+      <div><h4>Under the Practus brand</h4><p>On any Practus mandate we build behind you and stay invisible. You keep the client relationship, the roadmap, and the outcome. We are a cost input you price and mark up, never between you and the client.</p></div>
       <div><h4>Data and IP</h4><p>NDA and a data-processing agreement with full IP assignment: modules, policies, platform, yours. RBAC, tenant isolation with EntityId scoping, immutable audit logging. For sensitive data, open-weight models inside your own tenancy with zero retention.</p></div>
     </div>
   </div>
