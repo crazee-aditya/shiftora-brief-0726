@@ -39,7 +39,7 @@
 
   /* ---------- hero ---------- */
   .hero{padding:72px 0 50px;border-bottom:1px solid var(--line)}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:end}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:stretch}
   .hero h1{font-family:var(--heavy);font-size:clamp(34px,5.2vw,66px);line-height:.98;letter-spacing:-.03em}
   .hero h1 .lo{color:var(--muted2)}
   .hero .lede{margin-top:24px;font-size:18.5px;max-width:50ch;color:var(--ink2)}
@@ -52,7 +52,8 @@
   .stackrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .sk{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--ink2);border:1px solid var(--line2);padding:6px 10px;background:var(--paper2)}
 
-  .teaser{background:var(--con-bg);color:var(--con-text);font-family:var(--mono);font-size:12.5px;line-height:1.7;padding:18px 18px 16px;min-height:224px;position:relative}
+  .teaser{background:var(--con-bg);color:var(--con-text);font-family:var(--mono);font-size:12.5px;line-height:1.7;padding:18px 18px 16px;min-height:224px;position:relative;height:100%;box-sizing:border-box;display:flex;flex-direction:column}
+  #teaserBody{flex:1}
   .teaser .hd{display:flex;align-items:center;gap:8px;color:var(--con-dim);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--con-line);padding-bottom:11px;margin-bottom:12px}
   .dot{width:8px;height:8px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 var(--signal-line);animation:pulse 2.2s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(71,164,90,.5)}70%{box-shadow:0 0 0 7px rgba(71,164,90,0)}100%{box-shadow:0 0 0 0 rgba(71,164,90,0)}}
@@ -106,7 +107,7 @@
   .vig{background:var(--con-bg);color:var(--con-text);font-family:var(--mono);font-size:12.5px;line-height:1.75;padding:16px;margin-top:16px}
   .vig .vh{display:flex;justify-content:space-between;color:var(--con-dim);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--con-line);padding-bottom:10px;margin-bottom:10px}
 
-  .callout{border-left:2px solid var(--ink);background:var(--paper2);padding:18px 22px;margin-top:22px;max-width:80ch}
+  .callout{border-left:2px solid var(--ink);background:var(--paper2);padding:18px 22px;margin-top:22px;max-width:920px}
   .callout .ct{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
   .callout p{font-size:14.5px;color:var(--ink2);line-height:1.6}
 
@@ -270,6 +271,7 @@
   .build li a{border-bottom:1px solid var(--muted2)}
   /* deployment dossiers */
   .dossier{border-top:1px solid var(--line);padding:26px 24px 28px;background:var(--paper)}
+  #method .dossier,#econ .dossier{max-width:920px}
   .dossier .dos-tag{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line)}
   .dossier .dos-tag b{color:var(--ink);font-weight:400}
   .dossier h6{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:24px 0 10px}
