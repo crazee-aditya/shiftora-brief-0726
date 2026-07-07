@@ -44,6 +44,12 @@
   .hero h1 .lo{color:var(--muted2)}
   .hero .lede{margin-top:24px;font-size:18.5px;max-width:50ch;color:var(--ink2)}
   .hero .sub{margin-top:13px;font-size:15px;color:var(--muted);max-width:52ch}
+  .toc{margin-top:22px;border-top:1px solid var(--line)}
+  .toc a{display:flex;gap:16px;align-items:baseline;padding:10px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink2);font-size:13.5px;line-height:1.45}
+  .toc a:hover{background:var(--paper2)}
+  .toc .n{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);min-width:24px}
+  .toc b{color:var(--ink);min-width:112px;font-weight:700}
+  @media(max-width:640px){.toc b{min-width:88px}}
   .stat-row{display:flex;gap:0;margin-top:34px;border-top:1px solid var(--line);flex-wrap:wrap}
   .stat{padding:16px 22px 0 0;margin-right:22px;border-right:1px solid var(--line)}
   .stat:last-child{border-right:0}
@@ -339,15 +345,22 @@
       <div>
         <div class="eyebrow">Shiftora &#215; Practus &nbsp;/&nbsp; pre-read &nbsp;/&nbsp; 07 Jul 2026 &nbsp;/&nbsp; confidential</div>
         <h1>The record,<br>the method,<br><span class="lo">the proposal.</span></h1>
-        <p class="lede">Shiftora builds agent systems inside enterprise stacks that move a measured operating number, in production at Nitco, Musafir, and LegalMatch. The document is organised as follows. 01: the production record, four systems with measured results. 02: four client environments executing in this page; <a href="#c2">client-002</a> corresponds to the pattern discussed on the call. 03: the engagement method end to end. 04: the economics, with methodology beside every figure. 05: the proposal.</p>
-        <p class="sub">Recommendation: Target A in 05, an internal-first Practus copilot, two weeks, one gate metric agreed in writing on day one, fixed fee against the gate. The selection of target is the only decision requested at the call.</p>
+        <p class="lede">Shiftora builds agent systems inside enterprise stacks that move a measured operating number, in production at Nitco, Musafir, and LegalMatch.</p>
+        <nav class='toc'>
+          <a href='#cases'><span class='n'>01</span><b>Production</b><span>Four systems in production, each with a measured result and its method.</span></a>
+          <a href='#demos'><span class='n'>02</span><b>Environments</b><span>Four client consoles executing in this page; client-002 corresponds to the pattern discussed on the call.</span></a>
+          <a href='#method'><span class='n'>03</span><b>Method</b><span>The engagement end to end: audit, compile, build, operate.</span></a>
+          <a href='#econ'><span class='n'>04</span><b>Economics</b><span>Modeled value, with methodology beside every figure.</span></a>
+          <a href='#poc'><span class='n'>05</span><b>Proposal</b><span>A two-week POC against one gate metric, at a fixed fee.</span></a>
+        </nav>
+        <p class="sub">Recommendation: Target A in 05. An internal-first Practus copilot, delivered in two weeks against one gate metric agreed in writing on day one, at a fixed fee tied to that gate. The selection of target is the only decision requested at the call.</p>
         <div class="stat-row">
           <div class="stat"><b>4</b><small>In production, named in 01</small></div>
           <div class="stat"><b>71→86</b><small>Rolling-origin backtest, frozen holdout</small></div>
           <div class="stat"><b>96.8%</b><small>Weekly golden-set gate, week 16</small></div>
           <div class="stat"><b>13–18</b><small>Engineers, ~50% AI/ML</small></div>
         </div>
-        <p class='sub' style='margin-top:14px'>Every figure in this document carries its measurement method beside it: the backtest protocol is published in full in 01, the weekly release-gate report format in 03, and verified, modeled, and illustrative are labelled wherever they appear.</p>
+        <p class='sub' style='margin-top:14px'>Every figure in this document carries its measurement method beside it. The backtest protocol is published in full in 01; the weekly release-gate report format appears in 03; verified, modeled, and illustrative are labelled wherever they occur.</p>
         <div class="stackrow">
           <span class="sk">Python</span><span class="sk">TypeScript</span><span class="sk">.NET Minimal API</span><span class="sk">MongoDB · multi-tenant</span><span class="sk">Next.js</span><span class="sk">React Native</span><span class="sk">MCP-native tool registry</span><span class="sk">RL eval environments</span>
         </div>
@@ -504,7 +517,7 @@
 <section id="demos">
   <div class="wrap">
     <div class="sec-head"><span class="sec-code">02</span><h2>Operate the systems yourself</h2></div>
-    <p class="sec-intro">Four client environments execute within this page. client-002 implements the controller-copilot pattern discussed on the call; client-004 answers questions against a data room with enforced citations; client-001 and client-003 carry the forecasting and lead-intelligence patterns. Inputs are adjustable, and each agent displays its working: routing, confidences, gates. Console data is illustrative; each brief beneath its console is a modeled reference engagement sized to the Practus client base, anchored to the named production systems, with verified figures labelled as such. The consoles are executable rather than recorded.</p>
+    <p class="sec-intro">Four client environments execute within this page. Inputs are adjustable, and each agent displays its working: routing, confidences, gates. Console data is illustrative; each brief beneath its console is a modeled reference engagement sized to the Practus client base, anchored to the named production systems, with verified figures labelled as such. The consoles are executable rather than recorded.</p>
 
     <!-- CLIENT-002 -->
     <div class="portal rv" id="c2">
@@ -1012,7 +1025,10 @@
           </tbody>
         </table>
         <ul class='dfind'>
-          <li><b>Golden set +3 this week</b>, each born from a human override, now permanent regression tests: ICX-1147 FX timing on the AED entity, RAMP-0934 implementation services split to CapEx, AR-0311 payment-history evidence over the aging bucket.</li>
+          <li><b>Golden set +3 this week</b>, each born from a human override, now permanent regression tests.</li>
+          <li><b>ICX-1147</b> FX timing variance on the AED entity; resolved at the transaction-date rate.</li>
+          <li><b>RAMP-0934</b> implementation services split from software subscriptions to CapEx.</li>
+          <li><b>AR-0311</b> payment-history evidence over the aging bucket.</li>
         </ul>
         <p class='dnote2'><b>Change under regression:</b> rule 04 moved to the transaction-date RBI reference rate for AED pairs; full golden-set re-run, 0 regressions, 2 previously escalated cases now resolve correctly. <b>Decision: SHIP</b>, signed by the eval owner and the controller of record.</p>
     </div>
@@ -1145,8 +1161,14 @@
     </div>
 
     <div class="callout rv">
-      <div class="ct">Decisions needed on the call</div>
-      <p>Decisions requested, in order: <b>1)</b> the POC target, A, B, or C; <b>2)</b> the gate metric and the dataset owner on the Practus side; <b>3)</b> the platform approach, fully in-house or with a build partner for the first modules; <b>4)</b> the commercial shape of the POC, a fixed fee against the gate; <b>5)</b> who else at Practus should see this before we start.</p>
+      <div class="ct">Decisions requested at the call</div>
+      <ul class='dfind' style='margin-top:6px'>
+        <li><b>1.</b> The POC target: A, B, or C.</li>
+        <li><b>2.</b> The gate metric, and the dataset owner on the Practus side.</li>
+        <li><b>3.</b> The platform approach: fully in-house, or with a build partner for the first modules.</li>
+        <li><b>4.</b> The commercial shape: a fixed fee against the gate.</li>
+        <li><b>5.</b> Review: who else at Practus should see this before the start.</li>
+      </ul>
     </div>
   
     <div class="build rv">
