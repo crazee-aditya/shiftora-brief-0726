@@ -331,7 +331,7 @@
       <a href="#demos">02 Environments</a>
       <a href="#method">03 Method</a>
       <a href="#econ">04 Economics</a>
-      <a href="#poc">05 Proposal</a>
+      
       <a href="#arch">Appendix</a>
     </nav>
     <div class="tag">Prepared for Practus</div>
@@ -344,16 +344,16 @@
     <div class="hero-grid">
       <div>
         <div class="eyebrow">Shiftora &#215; Practus &nbsp;/&nbsp; pre-read &nbsp;/&nbsp; 07 Jul 2026 &nbsp;/&nbsp; confidential</div>
-        <h1>The record,<br>the method,<br><span class="lo">the proposal.</span></h1>
-        <p class="lede">Shiftora builds agent systems inside enterprise stacks that move a measured operating number, in production at Nitco, Musafir, LegalMatch, and further engagements that remain unnamed under NDA and client confidentiality obligations.</p>
+        <h1>The record,<br>the method,<br><span class="lo">the operating lens.</span></h1>
+        <p class="lede">Shiftora builds agent systems inside enterprise stacks that move a measured operating number, in production at Nitco, LegalMatch, a UAE travel-and-visa operator, and further engagements that remain unnamed under NDA and client confidentiality obligations.</p>
         <nav class='toc'>
           <a href='#cases'><span class='n'>01</span><b>Production</b><span>Systems in production, each with a measured result and its method.</span></a>
-          <a href='#demos'><span class='n'>02</span><b>Environments</b><span>Four client consoles executing in this page; client-002 corresponds to the pattern discussed on the call.</span></a>
+          <a href='#demos'><span class='n'>02</span><b>Environments</b><span>Four client consoles executing in this page, drawn from a wider engagement portfolio.</span></a>
           <a href='#method'><span class='n'>03</span><b>Method</b><span>The engagement end to end: audit, compile, build, operate.</span></a>
           <a href='#econ'><span class='n'>04</span><b>Economics</b><span>Modeled value, with methodology beside every figure.</span></a>
-          <a href='#poc'><span class='n'>05</span><b>Proposal</b><span>A two-week POC against one gate metric, at a fixed fee.</span></a>
+          
         </nav>
-        <p class="sub">Recommendation: Target A in 05. An internal-first Practus copilot, delivered in two weeks against one gate metric agreed in writing on day one, at a fixed fee tied to that gate. The selection of target is the only decision requested at the call.</p>
+        
         <div class="stat-row">
           
           <div class="stat"><b>71→86</b><small>Rolling-origin backtest, frozen holdout</small></div>
@@ -398,7 +398,7 @@
           <li><b>Ingestion agent</b>: normalises 36 months of order history across SKUs, channels, regions; schema drift handled at the connector.</li>
           <li><b>Seasonality agent</b>: decomposes each series into trend, seasonal index, and promotion uplift before any model sees it.</li>
           <li><b>Forecast agent</b>: gradient-boosted ensemble over the decomposed series; 12-month rolling horizon with lead-time-aware reorder signals per SKU.</li>
-          <li><b>Backtest agent</b>: rolling-origin cross-validation, 12 folds, every cycle; publishes WAPE and bias against held-out actuals.</li>
+          <li><b>Backtest agent</b>: rolling-origin cross-validation, 12 folds, every cycle; publishes WAPE (weighted absolute percentage error) and bias against held-out actuals.</li>
         </ul>
         <h5>Stack</h5>
         <div class="stackline"><i>Python</i><i>GBM ensemble + seasonal decomposition</i><i>rolling-origin CV</i><i>WAPE / bias gates</i></div>
@@ -478,14 +478,14 @@
 
     <div class="cs rv">
       <div class="l">
-        <div class="kick"><div class="client">Musafir: visa platform &amp; travel assistant</div><div class="geo">UAE · longest partnership</div></div>
+        <div class="kick"><div class="client">UAE travel group (name withheld): visa platform &amp; travel assistant</div><div class="geo">UAE · longest partnership</div></div>
         <p class="prob">Visa processing was manual and document-heavy, dying on errors nobody caught until submission. Support could not reason across a customer&#8217;s own passport and visa history.</p>
         <h5>What we built</h5>
         <ul class="agents">
           <li><b>Document intelligence agent</b>: OCR with confidence-routed extraction; low-confidence fields route to review, and nothing submits until it validates against country rules.</li>
           <li><b>Visa workflow agent</b>: a versioned rule engine per route and visa type; rule changes ship as versions, so past decisions stay reproducible.</li>
           <li><b>Travel assistant</b>: books, plans, and self-corrects with live context on visa and passport validity.</li>
-          <li><b>Platform</b>: multi-tenant MongoDB with EntityId scoping on every query path; .NET Minimal API core; Next.js and React Native surfaces.</li>
+          <li><b>Platform</b>: multi-tenant MongoDB with EntityId scoping (per-client filtering) on every query path; .NET Minimal API core; Next.js and React Native surfaces.</li>
         </ul>
         <h5>Stack</h5>
         <div class="stackline"><i>multi-tenant MongoDB · EntityId scoping</i><i>.NET Minimal API</i><i>Next.js</i><i>React Native</i><i>versioned rule engine</i><i>confidence-routed OCR</i></div>
@@ -517,7 +517,7 @@
 <section id="demos">
   <div class="wrap">
     <div class="sec-head"><span class="sec-code">02</span><h2>Operate the systems yourself</h2></div>
-    <p class="sec-intro">Four client environments execute within this page. Inputs are adjustable, and each agent displays its working: routing, confidences, gates. Console data is illustrative; each brief beneath its console is a modeled reference engagement sized to the Practus client base, anchored to the named production systems, with verified figures labelled as such. The consoles are executable rather than recorded.</p>
+    <p class="sec-intro">Four client environments execute within this page. Inputs are adjustable, and each agent displays its working: routing, confidences, gates. Console data is illustrative; each brief beneath its console is a modeled reference engagement sized to the Practus client base, anchored to the named production systems, with verified figures labelled as such. The consoles are executable rather than recorded. The four patterns are drawn from a wider set of deployed and in-flight engagements; they illustrate the operating method rather than its limits.</p>
 
     <!-- CLIENT-002 -->
     <div class="portal rv" id="c2">
@@ -601,7 +601,7 @@
         
 
         
-        <p class="dnote2"><b>Anchor.</b> The close, AP, cash, and variance agents in this environment are the module running in the console above. The multi-tenant and audit-trail machinery is the same shipped on Musafir. The org and the rupee ranges are modeled for a Practus-scale client rather than a claimed engagement; each value can be re-derived from the stated method.</p>
+        <p class="dnote2"><b>Anchor.</b> The close, AP, cash, and variance agents in this environment are the module running in the console above. The multi-tenant and audit-trail machinery is the same shipped on the UAE visa platform. The org and the rupee ranges are modeled for a Practus-scale client rather than a claimed engagement; each value can be re-derived from the stated method.</p>
       </div>
     </div>
 
@@ -661,8 +661,8 @@
         <table class="dtable">
           <thead><tr><th>Week</th><th>Focus</th><th>Gate results</th></tr></thead>
           <tbody>
-            <tr><td>1</td><td>Corpus ingested; golden question set frozen with the deal team</td><td>120 questions, answers hand-verified once</td></tr>
-            <tr><td>2</td><td>Retrieval tuned</td><td>Recall@5 on the golden set <span class="g2">78% to 93%</span></td></tr>
+            <tr><td>1</td><td>Corpus ingested; golden question set (a fixed, hand-verified test set) frozen with the deal team</td><td>120 questions, answers hand-verified once</td></tr>
+            <tr><td>2</td><td>Retrieval tuned</td><td>Recall@5 (correct passage within the top five results) on the golden set <span class="g2">78% to 93%</span></td></tr>
             <tr><td>3</td><td>Citation enforcement + covenant register live</td><td>240 obligations extracted, each linked to its clause</td></tr>
             <tr><td>4</td><td>Analyst adoption, side-by-side timing</td><td>Question turnaround measured against the manual baseline</td></tr>
           </tbody>
@@ -882,13 +882,7 @@
           <div><div class="k">Scale</div><div class="v">9 systems mapped as one operating graph · 41,000 manual hours identified · 11 recurring exception types</div></div>
         </div>
 
-        <h6>Unwritten rules, captured in interviews</h6>
-        <p class="dnote2">The SOP compiler extracts rules from documents. Interviews capture what never got written down. Both compile into executable rules, each with a named source.</p>
-        <ul class="dfind">
-          <li>Vendor advances for the Gujarat plant clear through a suspense ledger only one AP veteran reconciles; the mapping lives in his notebook. <b>source: AP lead · knowledge concentration</b></li>
-          <li>Imported-services entries are coded against the SOP because a 2022 tax notification was never absorbed into the manual. <b>source: indirect tax analyst · policy drift</b></li>
-          <li>When GCC receivables cross AED 2M in a month, treasury needs 3 days notice before close or consolidation slips 2 days. <b>source: treasury manager · process dependency</b></li>
-        </ul>
+        
 <h6>The process inventory, priced</h6>
         <table class="dtable">
           <thead><tr><th>Workflow</th><th>Automatable</th><th>Modeled value / yr</th><th>Build</th></tr></thead>
@@ -923,7 +917,7 @@
           </tbody>
         </table>
         <p class="dnote2">Below threshold the agent does not act, it escalates with context. Thresholds move only when the weekly calibration report justifies it, and every change is logged.</p>
-      <div class="dos-tag" style="margin-top:30px"><span>Phase 3 · <b>Build</b> · shipped in priority order, gated in writing</span><span>shadow mode before trust</span></div>
+      <div class="dos-tag" style="margin-top:30px"><span>Phase 3 · <b>Build</b> · shipped in priority order, gated in writing</span><span>shadow mode (observe-only) before trust</span></div>
 <h6>Implementation, week by week</h6>
         <table class="dtable">
           <thead><tr><th>Weeks</th><th>Focus</th><th>Gate results</th></tr></thead>
@@ -961,10 +955,10 @@
       <tbody>
         <tr><td>WAPE</td><td>Rolling-origin cross-validation, 12 held-out folds, re-run per cycle</td><td>&le; agreed target, per engagement</td></tr>
         <tr><td>Forecast bias</td><td>Signed error, tracked separately from WAPE</td><td>|bias| &le; 3%</td></tr>
-        <tr><td>Calibration (ECE)</td><td>Stated probability vs realised frequency, weekly</td><td>&le; 3%</td></tr>
+        <tr><td>Calibration (ECE, expected calibration error)</td><td>Stated probability vs realised frequency, weekly</td><td>&le; 3%</td></tr>
         <tr><td>Citation coverage</td><td>Share of generated sentences grounded in a retrieved chunk</td><td>= 100%, enforced</td></tr>
         <tr><td>Tool-call success</td><td>Typed-call completion excl. upstream outages</td><td>&ge; 99%</td></tr>
-        <tr><td>p95 step latency</td><td>Per agent step, measured at the runtime</td><td>&le; SLA, per surface</td></tr>
+        <tr><td>p95 (95th percentile) step latency</td><td>Per agent step, measured at the runtime</td><td>&le; SLA, per surface</td></tr>
         <tr><td>Human-override rate</td><td>Gated decisions edited or rejected</td><td>Monitored, trending down</td></tr>
       </tbody>
     </table>
@@ -1043,7 +1037,7 @@
     <p class="sec-intro">The same engagement is stated three ways in this document: throughput in 02 and 03, rupees here, architecture in Appendix A. This section is the finance translation.</p>
 <div class="callout rv">
       <div class="ct">On the numbers, three classes, always labelled</div>
-      <p><b>Verified:</b> figures from named production deployments (Nitco 71 to 86, Musafir shipped, the 16-week accuracy curve), backtested and reproducible on request. <b>Modeled:</b> the deployment dossiers are reference engagements sized to a Practus-scale client; every value line shows its methodology and conservative discounts so your team can stress-test each cell. <b>Illustrative:</b> the data inside the live consoles, generated in-browser. A number that cannot survive one of those three labels does not appear in this document, and second-order or cross-functional upside is named where relevant but excluded from every total.</p>
+      <p><b>Verified:</b> figures from named production deployments (Nitco 71 to 86, the UAE visa platform shipped, the 16-week accuracy curve), backtested and reproducible on request. <b>Modeled:</b> the deployment dossiers are reference engagements sized to a Practus-scale client; every value line shows its methodology and conservative discounts so your team can stress-test each cell. <b>Illustrative:</b> the data inside the live consoles, generated in-browser. A number that cannot survive one of those three labels does not appear in this document, and second-order or cross-functional upside is named where relevant but excluded from every total.</p>
     </div>
     <div class="dossier rv" style="border:1px solid var(--line);margin-top:22px">
       <div class="dos-tag"><span>Worked example · <b>the reference finance engagement</b> from 02 and 03</span><span>each value re-derivable</span></div>
@@ -1061,7 +1055,7 @@
         </table>
         <p class="dnote2"><b>One-time vs recurring.</b> The table above is recurring annual value. The DSO shift also releases working capital once: 6 to 8 days of receivables on &#8377;1,850 Cr revenue is roughly &#8377;30 to 40 Cr of cash freed, held permanently but counted once, because the two compound differently.</p>
       <h6>The EBITDA and enterprise value view</h6>
-      <p class="dnote2">The recurring range above is EBITDA-level operating impact, so it carries a multiple. The working-capital release is balance sheet: real, held permanently, counted once, never multiplied. Shown is the conservative case; the working model behind it carries moderate and aggressive scenarios and will be shared at the working session.</p>
+      <p class="dnote2">The recurring range above is EBITDA-level operating impact, so it carries a multiple. The working-capital release is balance sheet: real, held permanently, counted once, never multiplied. Shown is the conservative case; the working model behind it carries moderate and aggressive scenarios.</p>
       <table class="dtable" style="margin-top:12px">
         <thead><tr><th>Line</th><th>Modeled</th><th>At 8x</th><th>At 10x</th><th>At 12x</th></tr></thead>
         <tbody>
@@ -1075,70 +1069,12 @@
 </section>
 
 <!-- 05 PROPOSAL -->
-<section id="poc">
+
+
+<!-- APPENDIX A -->
+<section id="arch">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-code">05</span><h2>The proposal: two weeks, one gate metric</h2></div>
-    <p class="sec-intro">Recommendation: Target A, the internal-first Practus copilot. It proves the platform thesis on internal operations before any client is exposed, and it is the shortest path to the artifact a platform lead will require. Targets B and C remain open; the selection is requested at the call.</p>
-    <p class="sec-intro">Two weeks, one agent, one measurable outcome, against a gate metric agreed in writing on day one. Three candidate targets below; the call picks one. The deliverables are engineering artifacts, not slideware.</p>
-
-    <div class="eyebrow" style="margin-top:30px">Three candidate targets · pick on the call</div>
-    <div class="poc rv">
-      <div class="wk"><div class="w">Target A · internal-first</div><h4>A Practus copilot, for Practus</h4><ul>
-        <li>An internal agent over your own methodologies and past engagements: scoping, staffing, proposal assembly.</li>
-        <li>Best if you want zero client exposure while you test how we work.</li>
-        <li>You hold: a working internal tool and a measured read on our speed.</li>
-      </ul></div>
-      <div class="wk"><div class="w">Target B · client mandate</div><h4>Unblock one live mandate</h4><ul>
-        <li>One mandate where the committed outcome is currently blocked on a build.</li>
-        <li>Best if there is revenue waiting on execution this quarter.</li>
-        <li>You hold: the unblocked mandate and the eval report behind it.</li>
-      </ul></div>
-      <div class="wk"><div class="w">Target C · platform spike</div><h4>One module of the Practus platform</h4><ul>
-        <li>The controller-copilot skeleton on your schema, MCP-registered tools included, per the manifest above.</li>
-        <li>Best if the platform is the priority and you want the build risk priced before hiring completes.</li>
-        <li>You hold: a running module and the manifest to extend it, fully yours.</li>
-      </ul></div>
-    </div>
-
-    <div class="eyebrow" style="margin-top:34px">The two weeks, whichever target</div>
-
-    <div class="poc rv">
-      <div class="wk"><div class="w">Days 1–3</div><h4>Frame and access</h4><ul>
-        <li>Pick one target: an internal Practus module, or one live client mandate blocked on a build.</li>
-        <li>Agree the gate metric in numbers, WAPE, coverage, cycle time, and the baseline it must beat.</li>
-        <li>Sample dataset under NDA. No production access needed.</li>
-      </ul></div>
-      <div class="wk"><div class="w">Days 4–9</div><h4>Build against the gate</h4><ul>
-        <li>Stand the agent up end to end against your data, instrumented from the first commit.</li>
-        <li>Golden set frozen; every change runs the regression suite.</li>
-        <li>Daily 30-minute check-in with the trace on screen. No black box.</li>
-      </ul></div>
-      <div class="wk"><div class="w">Days 10–14</div><h4>Prove and hand over</h4><ul>
-        <li>Backtest against the held-out baseline; publish the eval report with the math.</li>
-        <li>Handover: repository, infra-as-code, runbook, and a working session with your team.</li>
-        <li>Joint readout against the day-one gate. The number decides, not the demo.</li>
-      </ul></div>
-    </div>
-
-    <div class="twocol rv">
-      <div>
-        <h4>Required from Practus</h4>
-        <ul>
-          <li>One named owner on the Practus side for the two weeks.</li>
-          <li>A sample dataset and the outcome definition.</li>
-          <li>Thirty minutes a day for the check-in.</li>
-        </ul>
-      </div>
-      <div>
-        <h4>What Practus holds at the end</h4>
-        <ul>
-          <li>A working agent against your data, with its trace and eval report.</li>
-          <li>The repository, infra-as-code, and runbook, operable without us.</li>
-          <li>A measured result against the day-one gate, defensible to a client or to Deepak.</li>
-        </ul>
-      </div>
-    </div>
-
+    <div class="sec-head"><span class="sec-code">APP · A</span><h2>Appendix A: reference architecture</h2></div>
     <div class="guard rv">
       <div class="g">Data stays in your tenancy</div>
       <div class="g">Recommend and approve, never auto-execute</div>
@@ -1146,43 +1082,7 @@
       <div class="g">Architected to ISO 42001 and SOC 2 Type II control frameworks · UAE PDPL and GDPR aligned</div>
       <div class='g'>RBAC · EntityId tenant isolation · immutable audit log</div>
     </div>
-
-    <div class="callout rv">
-      <div class="ct">Principal deployment risks and mitigations</div>
-      <table class="dtable" style="margin-top:12px">
-        <thead><tr><th>Risk</th><th>Early signal</th><th>Mitigation</th></tr></thead>
-        <tbody>
-          <tr><td>The SOP diverges from practice</td><td>The golden set, built from real transactions, disagrees with the manual</td><td>Shadow mode first; rules corrected against reality before anything acts</td></tr>
-          <tr><td>The team bypasses the queue</td><td>Queue items age; overrides spike without comments</td><td>Operator-first design: 4 items, not 40; overrides respected and retrained on; the operator&#39;s workload falls in week one</td></tr>
-          <tr><td>Access stalls</td><td>ERP permissions or bank portals not granted by day 3</td><td>Read-only scopes agreed before day one; a day-three stop criterion applies and is reported</td></tr>
-        </tbody>
-      </table>
-      <p class="dnote2">If the gate metric fails validation in week one, the engagement stops and the finding is reported. A fixed fee against a gate is meaningful only when the gate is permitted to fail.</p>
-    </div>
-
-    <div class="callout rv">
-      <div class="ct">Decisions requested at the call</div>
-      <ul class='dfind' style='margin-top:6px'>
-        <li><b>1.</b> The POC target: A, B, or C.</li>
-        <li><b>2.</b> The gate metric, and the dataset owner on the Practus side.</li>
-        <li><b>3.</b> The platform approach: fully in-house, or with a build partner for the first modules.</li>
-        <li><b>4.</b> The commercial shape: a fixed fee against the gate.</li>
-        <li><b>5.</b> Review: who else at Practus should see this before the start.</li>
-      </ul>
-    </div>
-  
-    <div class="build rv">
-      <div><h4>The team</h4><p>13 to 18 full-time engineers across Mumbai and Dubai. Roughly half are AI and ML engineers, including reinforcement-learning engineers dedicated to evaluation environments, backtesting, and release gating. The rest are full-stack.</p></div>
-      <div><h4>Under the Practus brand</h4><p>On any Practus mandate we build behind you and stay invisible. You keep the client relationship, the roadmap, and the outcome. We are a cost input you price and mark up, never between you and the client.</p></div>
-      <div><h4>Data and IP</h4><p>NDA and a data-processing agreement with full IP assignment: modules, policies, platform, yours. RBAC, tenant isolation with EntityId scoping, immutable audit logging. For sensitive data, open-weight models inside your own tenancy with zero retention.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- APPENDIX A -->
-<section id="arch">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-code">APP · A</span><h2>Appendix A: reference architecture</h2></div>
+    <p class='dnote2'>RBAC: role-based access control. EntityId scoping: every database query filtered by the client identifier.</p>
     <p class="sec-intro">The topology behind every system above. One pattern: a tenant-scoped data plane, an agent runtime with a typed, MCP-native tool registry, a human gate on consequential actions, an evaluation harness wired in as a first-class component, and an audit log under everything.</p>
 
     <div class="archwrap rv">
@@ -1278,11 +1178,7 @@
         <line class="ar" x1="911" y1="330" x2="830" y2="330"/>
       </svg>
     </div>
-    <div class="deploy rv">
-      <div><div class="t">Managed</div><div class="s">We host, you consume. Fastest to first value; full audit export.</div></div>
-      <div><div class="t">Your VPC</div><div class="s">Same stack deployed inside your cloud boundary. Data never leaves your perimeter.</div></div>
-      <div><div class="t">In-tenancy, open-weight</div><div class="s">Open-weight models inside your environment. Zero external API calls, zero retention.</div></div>
-    </div>
+    
   </div>
 </section>
 
@@ -1290,7 +1186,7 @@
 <section id="product">
   <div class="wrap">
     <div class="sec-head"><span class="sec-code">APP · B</span><h2>Appendix B: consulting IP as modules</h2></div>
-    <p class="sec-intro">You described it on the call: twenty years of consulting IP, turned into ready-made agents that deploy at a client, MCP servers, tool calls, a data lake underneath. In our architecture that is not a metaphor. A module is a concrete, versioned artifact: encoded judgement, typed tools, guardrails, a config schema, and an eval suite it must pass to ship.</p>
+    <p class="sec-intro">Twenty years of consulting IP, turned into ready-made agents that deploy at a client: MCP (Model Context Protocol) servers, tool calls, a data lake underneath. In this architecture that is not a metaphor. A module is a concrete, versioned artifact: encoded judgement, typed tools, guardrails, a config schema, and an eval suite it must pass to ship.</p>
 
     <div class="flow rv">
       <div class="node"><div class="n">Today</div><h4>IP in people</h4><p>Methods, models, and the Practus way live in senior heads, spreadsheets, and decks. Every engagement re-applies them by hand.</p></div>
@@ -1310,9 +1206,9 @@
 <span class="kk">config:</span> <span class="vv">client_schema.json</span>          <span class="c"># entities, calendars, chart of accounts</span>
 <span class="kk">evals:</span>  <span class="vv">golden_close_set/ · regression on every change</span>  <span class="c"># must pass to deploy</span>
 <span class="kk">audit:</span>  <span class="vv">every action → reasoning · confidence · timestamp</span></div>
-    <p class='dnote2' style='margin-top:14px'><b>In finance terms:</b> the same file, restated.</p>
+    <p class='dnote2' style='margin-top:14px'><b>Interpretation.</b> Each manifest line, stated in business terms.</p>
     <table class='dtable' style='margin-top:8px'>
-      <thead><tr><th>Manifest line</th><th>Meaning in finance terms</th></tr></thead>
+      <thead><tr><th>Manifest line</th><th>Business meaning</th></tr></thead>
       <tbody>
         <tr><td>policy: close_policy@v3.2</td><td>The close methodology of a partner, written down and version-numbered like software: v3.3 diffs, tests, rolls back.</td></tr>
         <tr><td>tools: [erp.read, gl.query, ...]</td><td>The systems it may touch. Each permission explicit and registered; nothing implicit.</td></tr>
@@ -1326,21 +1222,10 @@
 
     <div class="callout rv" style="margin-top:26px">
       <div class="ct">Precedent</div>
-      <p>We have made the knowledge-to-software leap once already, a visa specialist&#8217;s judgement encoded into the versioned, multi-tenant Musafir platform. client-002 above is the same anatomy applied to a finance controller&#8217;s work. The engineering risk in a platform build is not the idea; it is tenant isolation, versioning, and evaluation discipline, the three things this document keeps showing.</p>
+      <p>We have made the knowledge-to-software leap once already, a visa specialist&#8217;s judgement encoded into a versioned, multi-tenant visa platform for a UAE travel group. client-002 above is the same anatomy applied to a finance controller&#8217;s work. The engineering risk in a platform build is not the idea; it is tenant isolation, versioning, and evaluation discipline, the three things this document keeps showing.</p>
     </div>
 
-    <div class="eyebrow" style="margin-top:36px">A starting module library, drawn from your own practice areas</div>
-    <div class="lib rv">
-      <div><div class="t">Controller Copilot</div><div class="s">Close, AP triage, cash, variance. Running in client-002.</div></div>
-      <div><div class="t">FP&amp;A module</div><div class="s">Variance packs and board reporting from source systems.</div></div>
-      <div><div class="t">Working-capital module</div><div class="s">DSO, DPO, and inventory levers with quantified impact.</div></div>
-      <div><div class="t">Diligence module</div><div class="s">Data-room review and red-flag extraction for PE mandates.</div></div>
-      <div><div class="t">Cost-transformation module</div><div class="s">Spend decomposition and savings tracked against baseline.</div></div>
-      <div><div class="t">MIS module</div><div class="s">Management reporting without the manual export cycle.</div></div>
-      <div><div class="t">Revenue-intelligence module</div><div class="s">Calibrated scoring and cadence. Running in client-003.</div></div>
-      <div><div class="t">Data-room copilot</div><div class="s">Grounded retrieval with enforced citations. Running in client-004.</div></div>
-    </div>
-    <p class="note">The relationship, the roadmap, and the outcome stay with Practus on every one. Full IP assignment: the modules, the policies, and the platform are yours.</p>
+    
   </div>
 </section>
 
@@ -1376,7 +1261,7 @@
         <span>Prepared for Practus · Jul 2026</span>
       </div>
     </div>
-    <div class="fnote">Demo environments run on illustrative data in the browser; production metrics are backtested and reproducible on request. A recorded walkthrough and an engineering appendix follow by email. If one of the three POC targets is already preferred, a reply indicating the letter is sufficient. Architecture, module manifests, and evaluation methodology in this document reflect the production pattern deployed across the case studies in 01.</div>
+    <div class="fnote">Demo environments run on illustrative data in the browser; production metrics are backtested and reproducible on request. A recorded walkthrough and an engineering appendix follow by email. Architecture, module manifests, and evaluation methodology in this document reflect the production pattern deployed across the case studies in 01.</div>
   </div>
 </footer>
 
@@ -1578,7 +1463,7 @@
         "<span class='k'>›</span> auto-resolve 571 &nbsp;<span class='g'>within policy</span> · route 41 &nbsp;<span class='w'>→ human</span>",
         "<span class='k'>›</span> audit &nbsp;612 decisions logged · reasoning + confidence &nbsp;<span class='g'>ok</span>"
       ],
-      art:function(){ return '<div class="atitle">AP exceptions · 612 in, 41 routed · ICX-1147 held for approval</div>'+
+      art:function(){ return '<div class="atitle">AP exceptions · 612 in, 41 routed · ICX-1147 (sample invoice) held for approval</div>'+
         '<table class="dt"><thead><tr><th>Exception</th><th>Count</th><th>Action</th></tr></thead><tbody>'+
         row('Price variance','218','<span class="g">auto</span>')+
         row('Missing PO','164','<span class="g">auto</span>')+
